@@ -19,7 +19,7 @@ const Sidenav = () => {
         </ul>
       </nav>
       <h1 id="sideways-header">Jacob Hughes</h1>
-      <div className="flex flex-grow h-[300px]"></div>
+      <div className="h-[250px]"></div>
       <div className="p-8 flex gap-4 items-center justify-center">
         <a href="https://open.spotify.com/artist/5AmZgso5Uv1W3Bl5eStEYC?si=tmY8yaBnQoiKsrnDeM0t-A">
           <BsSpotify size={20} />
