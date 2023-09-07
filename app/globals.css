@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#page-links {
+  @apply flex flex-row mt-4;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+#page-links li {
+  @apply mx-4 my-6 font-bold font-serif lowercase;
+  text-decoration: underline teal 3px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#sideways-header {
+  @apply text-5xl font-extrabold uppercase absolute left-[152px] top-20 z-50 tracking-wider;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+#main-image {
+  filter: sepia() saturate(0) hue-rotate(150deg) brightness(70%) opacity(5);
 }
