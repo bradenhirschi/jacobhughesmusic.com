@@ -1,4 +1,4 @@
-import { BsInstagram, BsSpotify } from "react-icons/bs";
+import { BsInstagram, BsSpotify, BsYoutube } from "react-icons/bs";
 
 const Sidenav = () => {
   return (
@@ -6,13 +6,15 @@ const Sidenav = () => {
       <nav>
         <ul id="page-links">
           <li>
-            <a href="./albums">Albums</a>
+            <a href="https://open.spotify.com/artist/5AmZgso5Uv1W3Bl5eStEYC?si=tmY8yaBnQoiKsrnDeM0t-A">
+              Spotify
+            </a>
           </li>
           <li>
-            <a href="./merch">Merch</a>
+            <a href="https://instagram.com/feedmegrapes49">Instagram</a>
           </li>
           <li>
-            <a href="./about">About</a>
+            <a href="https://www.youtube.com/@jacobhughes217">YouTube</a>
           </li>
         </ul>
       </nav>
@@ -24,6 +26,9 @@ const Sidenav = () => {
         </a>
         <a href="https://instagram.com/feedmegrapes49">
           <BsInstagram size={20} />
+        </a>
+        <a href="https://www.youtube.com/@jacobhughes217">
+          <BsYoutube size={20} />
         </a>
       </div>
     </div>
