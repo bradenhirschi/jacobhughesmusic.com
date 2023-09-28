@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`bg-yellow-50 ${inter.className}`}>
         <div className="flex">
           <Sidenav />
           {children}

@@ -14,11 +14,23 @@
 }
 
 #sideways-header {
-  @apply text-5xl font-extrabold uppercase absolute left-[152px] top-20 z-50 tracking-wider;
+  @apply text-5xl font-extrabold uppercase absolute left-[176px] top-20 z-50 tracking-wider;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
 
 #main-image {
   filter: sepia() saturate(0) hue-rotate(150deg) brightness(70%) opacity(5);
+}
+
+.slanted-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+.container {
+  aspect-ratio: 8 / 5;
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
 }
