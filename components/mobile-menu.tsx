@@ -1,13 +1,32 @@
+"use client";
+
+import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+import { useState } from "react";
 import { BsInstagram, BsSpotify, BsYoutube } from "react-icons/bs";
 
-const Sidenav = () => {
+const MobileMenu = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
   return (
-    <>
-      <div className="w-[200px] h-full" />
-      <div className="fixed top-0 left-0 z-[50] bg-white h-full">
-        <div className="w-[200px] relative h-full flex flex-col">
-          <nav>
-            <ul id="page-links" className="sideways">
+    <div className="z-10 h-full w-full">
+      <button
+        onClick={() => setMenuOpen(true)}
+        className="fixed top-2 right-2 p-2 rounded-full hover:bg-teal-600"
+      >
+        <BiMenuAltRight size={30} />
+      </button>
+      {menuOpen && (
+        <div className="fixed inset-0 bg-yellow-50 flex flex-col">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="fixed top-2 right-2 p-2 rounded-full hover:bg-gray-100"
+          >
+            <AiOutlineClose size={30} />
+          </button>
+          <h2 className="md:hidden mb-20 ml-4 pt-4">Jacob Hughes</h2>
+          <nav className="px-20">
+            <ul id="mobile-menu-links">
               <li>
                 <a href="https://open.spotify.com/artist/5AmZgso5Uv1W3Bl5eStEYC?si=tmY8yaBnQoiKsrnDeM0t-A">
                   Spotify
@@ -21,11 +40,8 @@ const Sidenav = () => {
               </li>
             </ul>
           </nav>
-          <h1 id="sideways-header" className="sideways">
-            Jacob Hughes
-          </h1>
           <div className="grow" />
-          <div className="m-8 flex gap-3 items-center justify-center">
+          <div className="flex gap-3 items-center justify-center p-20">
             <a
               href="https://open.spotify.com/artist/5AmZgso5Uv1W3Bl5eStEYC?si=tmY8yaBnQoiKsrnDeM0t-A"
               className="rounded-full p-2 hover:bg-teal-500"
@@ -46,9 +62,9 @@ const Sidenav = () => {
             </a>
           </div>
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
-export default Sidenav;
+export default MobileMenu;

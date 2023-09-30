@@ -45,6 +45,10 @@ h1 {
   @apply text-5xl font-extrabold uppercase top-20 z-50 tracking-wider;
 }
 
+h2 {
+  @apply text-4xl font-extrabold uppercase;
+}
+
 iframe {
   aspect-ratio: 16 / 9;
 }
