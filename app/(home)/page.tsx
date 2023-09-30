@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main className="w-full bg-yellow-50">
-        <section className="bg-teal-500 min-h-[110vh] slanted-bottom">
+        <section className="bg-teal-500 slanted-bottom">
           <div className="relative h-full mx-auto container">
             <Image
               id="main-image"
@@ -21,7 +21,7 @@ export default function Home() {
                 <Image
                   alt={"Album cover"}
                   src={albumCover}
-                  className="w-[250px] h-[250px]"
+                  className="h-32 w-32 sm:h-44 sm:w-44 lg:w-64 lg:h-64"
                 />
               </a>
               <div className="bg-black h-12 w-[2px] my-4 ml-6"></div>
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="mx-44 my-24">
+        <section className="m-8 lg:mx-44 lg:my-24">
           <iframe
             className="w-full"
             src="https://www.youtube.com/embed/_U3lPHakMzA?si=y4bGmtVi-CnYE_mN"

@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+#main-image {
+  filter: sepia() saturate(0) hue-rotate(150deg) brightness(70%) opacity(5);
+}
+
+#mobile-menu-links {
+  @apply flex flex-col mt-4 text-2xl gap-12;
+}
+
+#mobile-menu-links li {
+  @apply font-bold font-serif lowercase;
+  text-decoration: underline teal 3px;
+}
+
 #page-links {
   @apply flex flex-row mt-4;
-  writing-mode: vertical-rl;
-  transform: rotate(-180deg);
 }
 
 #page-links li {
@@ -13,14 +24,13 @@
   text-decoration: underline teal 3px;
 }
 
-#sideways-header {
-  @apply text-5xl font-extrabold uppercase absolute left-[176px] top-20 z-50 tracking-wider;
+.sideways {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
 
-#main-image {
-  filter: sepia() saturate(0) hue-rotate(150deg) brightness(70%) opacity(5);
+#sideways-header {
+  @apply absolute left-[176px];
 }
 
 .slanted-bottom {
@@ -29,6 +39,10 @@
 
 .container {
   aspect-ratio: 8 / 5;
+}
+
+h1 {
+  @apply text-5xl font-extrabold uppercase top-20 z-50 tracking-wider;
 }
 
 iframe {
