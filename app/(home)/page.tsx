@@ -11,8 +11,10 @@ export default function Home() {
           <h2 className="md:hidden mb-20 ml-4 pt-4">Jacob Hughes</h2>
           <div className="relative h-full mx-auto container">
             <Image
+              priority
+              loading="eager"
               id="main-image"
-              alt="Picture of the artist"
+              alt="Picture of Jacob Hughes"
               src={artistPicture}
               layout="fill"
               objectFit="contain"
@@ -20,6 +22,7 @@ export default function Home() {
             <div className="absolute top-[20%] left-[10%] text-center">
               <a href="https://open.spotify.com/album/0qBSQ65L07h1xoXfviiHHO?si=BhBPKP36QNO2Baj5l2b-CQ">
                 <Image
+                  loading="eager"
                   alt={"Album cover"}
                   src={albumCover}
                   className="h-32 w-32 sm:h-44 sm:w-44 lg:w-64 lg:h-64"
