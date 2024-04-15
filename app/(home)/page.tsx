@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import artistPicture from '../../public/artist-picture.png';
+import waistUpPicture from '../../public/waist-up.png';
 import albumCover from '../../public/album-cover.png';
 import Footer from '@/components/footer';
 
@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main className="w-full bg-yellow-50">
-        <section className="bg-teal-500 slanted-bottom">
+        <section className="bg-[#99857b] slanted-bottom">
           <h2 className="md:hidden mb-20 ml-4 pt-4">Jacob Hughes</h2>
           <div className="relative h-full mx-auto container">
             <Image
@@ -15,9 +15,10 @@ export default function Home() {
               loading="eager"
               id="main-image"
               alt="Picture of Jacob Hughes"
-              src={artistPicture}
+              src={waistUpPicture}
               layout="fill"
               objectFit="contain"
+              className='ml-20 scale-x-[-1]'
             />
             <div className="absolute top-[20%] left-[10%] text-center">
               <a href="https://open.spotify.com/album/0qBSQ65L07h1xoXfviiHHO?si=BhBPKP36QNO2Baj5l2b-CQ">
