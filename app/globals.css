@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #main-image {
-  filter: sepia() saturate(0) hue-rotate(150deg) brightness(70%) opacity(5);
+  /* filter: sepia() saturate(0) hue-rotate(150deg) brightness(70%) opacity(5); */
 }
 
 #mobile-menu-links {
